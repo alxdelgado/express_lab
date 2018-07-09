@@ -6,6 +6,19 @@ const express = require('express');
 // intializes the express object.  
 const app = express();
 
+// const name = ['alex']; 
+
+
+// Greeting 
+app.get('/greeting/:name', (request, response) => {
+ console.log(request.params);
+ const output = ('Hello ' + request.params.name + " !"); 
+ response.send(output);
+ // response.send(name); 
+});
+
+
+
 
 // define a route to the server. 
 app.get('/', (request, response) => {
